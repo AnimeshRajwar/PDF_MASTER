@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-xl font-semibold mb-4">📑 Convert To PDF</h2>
+
+
+<form action="{{ url_for('word_to_pdf') }}" method="post" enctype="multipart/form-data" class="space-y-2 mb-6">
+  <label class="block">Upload Word (.docx)</label>
+  <input type="file" name="docx" required class="block w-full border rounded px-3 py-2">
+  <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">
+    Word → PDF
+  </button>
+</form>
+
+
+<form action="{{ url_for('text_to_pdf') }}" method="post" enctype="multipart/form-data" class="space-y-2 mb-6">
+  <label class="block">Upload Text File (.txt)</label>
+  <input type="file" name="txt" required class="block w-full border rounded px-3 py-2">
+  <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">
+    Text → PDF
+  </button>
+</form>
+
+
+<form action="{{ url_for('images_to_pdf') }}" method="post" enctype="multipart/form-data" class="space-y-2">
+  <label class="block">Upload Images</label>
+  <input type="file" name="images" multiple required class="block w-full border rounded px-3 py-2">
+  <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">
+    Images → PDF
+  </button>
+</form>
+{% endblock %}

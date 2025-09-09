@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-xl font-semibold mb-4">📝 Extract From PDF</h2>
+
+
+<form action="{{ url_for('pdf_to_word') }}" method="post" enctype="multipart/form-data" class="space-y-2 mb-6">
+  <label class="block">Upload PDF</label>
+  <input type="file" name="pdf" required class="block w-full border rounded px-3 py-2">
+  <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">
+    PDF → Word
+  </button>
+</form>
+
+
+<form action="{{ url_for('pdf_to_text') }}" method="post" enctype="multipart/form-data" class="space-y-2 mb-6">
+  <label class="block">Upload PDF</label>
+  <input type="file" name="pdf" required class="block w-full border rounded px-3 py-2">
+  <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">
+    PDF → Text
+  </button>
+</form>
+
+
+<form action="{{ url_for('pdf_to_images') }}" method="post" enctype="multipart/form-data" class="space-y-2 mb-6">
+  <label class="block">Upload PDF</label>
+  <input type="file" name="pdf" required class="block w-full border rounded px-3 py-2">
+  <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">
+    PDF → Images
+  </button>
+</form>
+
+
+<form action="{{ url_for('pdf_to_excel') }}" method="post" enctype="multipart/form-data" class="space-y-2">
+  <label class="block">Upload PDF</label>
+  <input type="file" name="pdf" required class="block w-full border rounded px-3 py-2">
+  <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow">
+    PDF → Excel
+  </button>
+</form>
+{% endblock %}
