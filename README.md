@@ -24,7 +24,7 @@ It also supports a **modern UI with light/dark mode toggle** built using Tailwin
 - **Backend:** Python, Flask  
 - **Frontend:** TailwindCSS, JavaScript  
 - **PDF Handling:** PyPDF2, python-docx, openpyxl, Pillow  
-- **Deployment:** Railway
+- **Deployment:** Rendor
 
 ---
 
